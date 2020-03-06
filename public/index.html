@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="estilos.css" media="screen"/>
+        <link rel="" type="text/html" href="footer.html" media="screen"/>
+    <meta charset="utf-8">
+    <title>🍦Sugerencias🍦</title>
+</head>
+<body>
+<main>
+    <div class="box">
+        
+<form action="javascript:sabor();">
+    <h1>Sugerencia de Helados</h1>
+<h5>Que ingrediente principal prefieres:<br>
+(1)Agua (2)Leche </h5>
+	<input id ="inputBase" type="number" min="1" max="2"
+        placeholder="Base">
+        <h5>Te gustaría:<br>
+            (1)Dulce (2)No muy dulce </h5>
+        <input id ="inputDulce" type="number" min="1" max="2"
+        placeholder="Dulce"><br>
+        <br>
+     <button class="button" type="submit">Sugiéreme algo</button>
+</form>
+</div>
+<script>
+	function sabor(){
+        const base=inputBase.valueAsNumber;
+        const dulce=inputDulce.valueAsNumber;
+        if (base == 1){
+            if (dulce==1){
+                alert("Te recomiendo que pruebes: \nGrosella \n Limonada Rosada \nMora");
+            } else if (dulce==2){
+                alert("Te recomiendo que pruebes: \nLimon \n Mango con Chamoy \nPulparindo");
+            }
+        } else if(base == 2){
+            if (dulce==1){
+                alert("Te recomiendo que pruebes: \nGalleta Oreo \n Fresas con Crema\nGansito");
+            } else if (dulce==2){
+                alert("Te recomiendo que pruebes: \nPay de Limon \n Coco \nCapuccino");
+            }
+        }
+}
+
+</script>
+</main>
+<iframe src="footer.html" frameborder="0">
+</iframe>
+</body>
+</html>
